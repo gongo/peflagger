@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./app.css">
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <header>
+        <h1>Peflagger</h1>
+      </header>
+
+      <article>
+        <section id="fields">
+          <div>
+            <p>
+              <span>Input the value of <strong>error_reporting</strong>:</span>
+              <input type="text" v-model="errorFlag">
+            </p>
+            <p>
+              <span>Select the version of <strong>your use PHP</strong>:</span>
+              <select v-model="selectedVersion">
+                <option value="php4x">PHP 4.x</option>
+                <option value="php50">PHP 5.0 and 5.1</option>
+                <option value="php52">PHP 5.2</option>
+                <option value="php53">PHP 5.3</option>
+                <option value="php54">PHP 5.4 or later</option>
+              </select>
+            </p>
+          </div>
+          <div>
+            <div id="validation" v-show="validate">
+              <header>Validation Error</header>
+              <article>{{validateErrorMessage}}</article>
+            </div>
+          </div>
+        </section>
+
+        <table>
+          <thead>
+            <tr>
+              <th class="name">Name</th>
+              <th class="value">Value</th>
+              <th class="description">Description</th>
+              <th class="note">Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-repeat="selectedErrors | flag errorFlag" v-class="highlight : name == 'E_ALL'">
+              <td>{{ name }}</td>
+              <td>{{ value }}</td>
+              <td>{{ description }}</td>
+              <td>{{ note }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </div>
+
+    <script>require('application');</script>
+  </body>
+</html>

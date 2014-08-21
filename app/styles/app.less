@@ -1,0 +1,74 @@
+@import "node_modules/bootstrap/less/bootstrap";
+
+#main {
+    .container;
+
+    > header {
+        .page-header;
+    }
+
+    > article {
+        .row;
+    }
+}
+
+#fields {
+    .row;
+
+    margin-bottom: 3em;
+
+    > div {
+        .make-md-column(6);
+        .make-xs-column(12);
+
+        #validation {
+            .panel;
+            .panel-warning;
+
+            margin-bottom: 0px;
+
+            > header {
+                .panel-heading;
+            }
+
+            > article {
+                .panel-body;
+            }
+        }
+
+    }
+
+    p > span {
+        margin-right: 1em;
+    }
+}
+
+table {
+    .table;
+    .table-striped;
+    .table-bordered;
+
+    table-layout: fixed;
+
+    thead th {
+        &.value {
+            width: 10%;
+        }
+
+        &.name {
+            width: 20%;
+        }
+
+        &.description {
+            width: 45%;
+        }
+
+        &.note {
+            width: 25%;
+        }
+    }
+
+    tbody tr.highlight {
+        color: red;
+    }
+}

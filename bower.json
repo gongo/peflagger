@@ -1,0 +1,6 @@
+{
+  "name": "peflagger",
+  "dependencies": {
+    "vue": "~0.10.6"
+  }
+}
