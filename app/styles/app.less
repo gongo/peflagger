@@ -1,4 +1,6 @@
 @import "node_modules/bootstrap/less/bootstrap";
+@import "node_modules/bootswatch/sandstone/bootswatch";
+@import "node_modules/bootswatch/sandstone/variables";
 
 #main {
     .container;
@@ -23,12 +25,13 @@
 
         #validation {
             .panel;
-            .panel-warning;
+            .panel-primary;
 
             margin-bottom: 0px;
 
             > header {
                 .panel-heading;
+                padding-left: 1em;
             }
 
             > article {
@@ -49,6 +52,7 @@ table {
     .table-bordered;
 
     table-layout: fixed;
+    border-width: 2px;
 
     thead th {
         &.value {
@@ -66,9 +70,5 @@ table {
         &.note {
             width: 25%;
         }
-    }
-
-    tbody tr.highlight {
-        color: red;
     }
 }
