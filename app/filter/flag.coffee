@@ -4,10 +4,16 @@ isEqualFlag = (target, value) ->
 module.exports = (errorFlags, filterValueKey) ->
   filterValue = @[filterValueKey]
   views = []
+  dictionary = @selectedDictionary()
 
-  for key, constant of errorFlags.constants
-    constant.name = key
-    views.push(constant) if isEqualFlag(filterValue, constant.value)
+  for key, value of errorFlags.constants
+    continue unless isEqualFlag(filterValue, value)
+    constant =
+      name: key
+      value: value
+      description: dictionary[key].description
+      note: dictionary[key].note
+    views.push(constant)
 
   views.sort (a, b) ->
     a.value - b.value
