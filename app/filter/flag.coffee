@@ -1,10 +1,10 @@
 isEqualFlag = (target, value) ->
   (target & value) == value
 
-module.exports = (errorFlags, filterValueKey) ->
+module.exports = (errorFlags, filterValueKey, dictionaryKey) ->
   filterValue = @[filterValueKey]
+  dictionary = @[dictionaryKey]
   views = []
-  dictionary = @selectedDictionary()
 
   for key, value of errorFlags.constants
     continue unless isEqualFlag(filterValue, value)

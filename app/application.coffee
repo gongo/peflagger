@@ -7,19 +7,19 @@ new Vue
     flag: require('filter/flag')
 
   methods:
-    selectedDictionary: ->
-      @dictionaries[@selectedLanguage]
-
-  computed:
-    selectedErrors: ->
-      @errorConstants[@selectedVersion]
-
     validate: ->
       result = validate(@errorFlag, 0, @selectedErrors.max)
       if result?
         @validateErrorMessage = result
         return true
       false
+
+  computed:
+    selectedErrors: ->
+      @errorConstants[@selectedVersion]
+
+    selectedDictionary: ->
+      @dictionaries[@selectedLanguage]
 
   data:
     selectedLanguage: 'en'
