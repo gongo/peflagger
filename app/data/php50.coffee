@@ -1,6 +1,6 @@
 previousConstants = require('data/php4x').constants
 newCurrentConstants =
-  E_STRICT: 2048,
+  E_STRICT: 2048
 
 merge = require('helper/hash_merge')
 
