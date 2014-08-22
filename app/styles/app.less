@@ -19,26 +19,25 @@
 
     margin-bottom: 3em;
 
-    > div {
-        .make-md-column(6);
-        .make-xs-column(12);
+    > form {
+        > div {
+            .make-row();
+            margin-bottom: 1em;
 
-        #validation {
-            .panel;
-            .panel-primary;
-
-            margin-bottom: 0px;
-
-            > header {
-                .panel-heading;
-                padding-left: 1em;
+            > label {
+                .make-sm-column(3);
+                text-align: right;
             }
 
-            > article {
-                .panel-body;
+            > input, > select {
+                .make-sm-column(3);
+            }
+
+            > span {
+                margin-left: 1em;
+                .text-warning;
             }
         }
-
     }
 
     p > span {
@@ -52,7 +51,6 @@ table {
     .table-bordered;
 
     table-layout: fixed;
-    border-width: 2px;
 
     thead th {
         &.value {
@@ -70,5 +68,31 @@ table {
         &.note {
             width: 25%;
         }
+    }
+}
+
+// Sticky footer styles
+// refs: http://getbootstrap.com/examples/sticky-footer/sticky-footer.css
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 130px;
+}
+
+footer {
+    .text-left;
+    .container;
+
+    position: absolute;
+    bottom: 0;
+    height: 130px;
+    padding-top: 1em;
+
+    p {
+        .text-muted;
     }
 }

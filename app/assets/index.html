@@ -15,13 +15,15 @@
 
       <article>
         <section id="fields">
-          <div>
-            <p>
-              <span>Input the value of <strong>error_reporting</strong>:</span>
+          <form>
+            <div>
+              <label>Input the value of error_reporting:</label>
               <input type="text" v-model="errorFlag">
-            </p>
-            <p>
-              <span>Select the version of <strong>your use PHP</strong>:</span>
+              <span v-show="validate">Warning: {{validateErrorMessage}}</span>
+            </div>
+
+            <div>
+              <label>Select the version of your use PHP:</label>
               <select v-model="selectedVersion">
                 <option value="php4x">PHP 4.x</option>
                 <option value="php50">PHP 5.0 and 5.1</option>
@@ -29,14 +31,9 @@
                 <option value="php53">PHP 5.3</option>
                 <option value="php54">PHP 5.4 or later</option>
               </select>
-            </p>
-          </div>
-          <div>
-            <div id="validation" v-show="validate">
-              <header>Validation Error</header>
-              <article>{{validateErrorMessage}}</article>
+              <span><code>E_ALL = {{selectedErrors.eAllValue}}</code></span>
             </div>
-          </div>
+          </form>
         </section>
 
         <table>
@@ -58,8 +55,19 @@
           </tbody>
         </table>
       </article>
-    </div>
 
+      <footer>
+        <p>
+          &copy; 2014 Wataru MIYAGUNI
+        </p>
+        <p>
+          Powered by <a href="http://vuejs.org/">Vue.js</a>
+        </p>
+        <p>
+          Provided by <a href="http://php.net/manual/en/errorfunc.constants.php">PHP: Predefined Constants - Manual</a>
+        </p>
+      </footer>
+    </div>
     <script>require('application');</script>
   </body>
 </html>
