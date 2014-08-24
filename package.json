@@ -15,7 +15,8 @@
   ],
   "scripts": {
     "start": "brunch watch --server",
-    "postinstall": "bower install && brunch build --production"
+    "postinstall": "bower install && brunch build --production",
+    "test": "brunch build && mocha-phantomjs public/test.html"
   },
   "engines": {
     "node": "0.10.x"
