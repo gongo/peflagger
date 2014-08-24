@@ -32,5 +32,10 @@
     "bootstrap": "~3.2.0",
     "less-brunch": "~1.7.2",
     "bootswatch": "~3.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.4",
+    "mocha-phantomjs": "^3.5.0",
+    "phantomjs": "^1.9.7-15"
   }
 }
