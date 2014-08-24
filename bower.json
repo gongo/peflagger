@@ -1,6 +1,8 @@
 {
   "name": "peflagger",
   "dependencies": {
+    "mocha": "~1.21.4",
+    "assert": "~0.1.0",
     "vue": "~0.10.6"
   }
 }
