@@ -6,20 +6,15 @@ new Vue
   filters:
     flag: require('filter/flag')
 
-  methods:
-    validate: ->
-      result = validate(@errorFlag, 0, @selectedErrors.max)
-      if result?
-        @validateErrorMessage = result
-        return true
-      false
-
   computed:
     selectedErrors: ->
       @errorConstants[@selectedVersion]
 
     selectedDictionary: ->
       @dictionaries[@selectedLanguage]
+
+    validateErrorMessage: ->
+      validate(@errorFlag, 0, @selectedErrors.max)
 
   data:
     selectedLanguage: 'en'
