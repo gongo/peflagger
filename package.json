@@ -22,17 +22,18 @@
     "node": "0.10.x"
   },
   "dependencies": {
-    "css-brunch": "~1.7.0",
-    "coffee-script-brunch": "~1.8.0",
-    "javascript-brunch": "~1.7.1",
-    "node-static": "~0.7.4",
-    "uglify-js-brunch": "~1.7.7",
-    "brunch": "~1.7.14",
-    "bower": "~1.3.9",
-    "clean-css-brunch": "~1.7.1",
     "bootstrap": "~3.2.0",
+    "bootswatch": "~3.2.0",
+    "bower": "~1.3.9",
+    "brunch": "~1.7.14",
+    "clean-css-brunch": "~1.7.1",
+    "coffee-script-brunch": "~1.8.0",
+    "css-brunch": "~1.7.0",
+    "javascript-brunch": "~1.7.1",
     "less-brunch": "~1.7.2",
-    "bootswatch": "~3.2.0"
+    "newrelic": "^1.10.1",
+    "node-static": "~0.7.4",
+    "uglify-js-brunch": "~1.7.7"
   },
   "devDependencies": {
     "mocha": "^1.21.4",

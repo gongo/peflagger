@@ -7,3 +7,5 @@ require('http').createServer(function (request, response) {
         fileServer.serve(request, response);
     }).resume();
 }).listen(port);
+
+require('newrelic');
