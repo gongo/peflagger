@@ -1,4 +1,4 @@
-Pizza FIGlet
+Peflagger
 =============
 
 [![Build Status](https://travis-ci.org/gongo/peflagger.svg?branch=master)](https://travis-ci.org/gongo/peflagger)
